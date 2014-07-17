@@ -12,7 +12,7 @@
 
   };
 
-  Game.DIM_X = 1338;
+  Game.DIM_X = 1100;
   Game.DIM_Y = 700;
   Game.FPS = 30;
 
@@ -81,8 +81,8 @@
     var game = this;
     game.asteroids.forEach(function(ast) {
       if (game.ship.isCollidedWith(ast)) {
-        alert("Game Over!");
         game.stop();
+        alert("Game Over!");
       }
     });
   };
@@ -102,15 +102,15 @@
   Game.prototype.removeAsteroid = function(asteroid) {
     for (var i = 0; i < this.asteroids.length; i++){
       if (this.asteroids[i] === asteroid) {
-        var iPosX = this.asteroids[i].pos[0] + Math.random() * 3;
-        var iPosY = this.asteroids[i].pos[1] + Math.random() * 3;
+        var iPosX = this.asteroids[i].pos[0] + Math.random() * 15;
+        var iPosY = this.asteroids[i].pos[1] + Math.random() * 15;
         var iPos = [iPosX, iPosY];
 
         var newRad = this.asteroids[i].rad / 1.5;
-        var iVel = [Math.random() * 3, Math.random() * 3];
+        var iVel = [Math.random() * 3, Math.random() * 5];
         this.asteroids.splice(i, 1);
         for(var j = 0; j < 3; j++) {
-          if (newRad > 10) {
+          if (newRad > 20) {
             this.asteroids.push(new Asteroids.Asteroid(iPos, iVel, newRad, this));
           }
         }
