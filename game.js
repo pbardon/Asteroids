@@ -47,6 +47,12 @@
     this.ship.thrusting = false;
   };
 
+  Game.prototype.renderGameWin = function() {
+    var game = this;
+    game.canvas.clearRect(0,0, Game.DIM_X, Game.DIM_Y);
+    game.canvas.fillText(You Win!,DIM_X/2,DIM_Y/2);
+  }
+
   Game.prototype.move = function() {
     this.ship.move();
 
@@ -72,7 +78,7 @@
     game.checkShipCollisions();
     game.draw();
     if (game.checkWin()) {
-      alert("You Win!")
+      game.renderGameWin();
       game.stop();
     }
   };
