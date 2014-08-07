@@ -61,13 +61,23 @@ Function.prototype.inherits = function(object) {
   };
 
   Asteroid.randomAsteroid = function(dimX, dimY) {
-    if (Asteroid.GROUPER){
-      var rPos = [(dimX/8 * Math.random()), (dimY/8 * Math.random())];
-    } else {
-      var rPos = [((dimX/8 * Math.random())+ (3*(dimX/4))), ((dimY/8 * Math.random())+ (3*(dimX/4)))];
+    var grouper = true
+    if (Math.random() > .5) {
+      grouper = false;
     }
-    Asteroid.GROUPER = false
-    var rPos = [(dimX/2 * Math.random()), (dimY/2 * Math.random())];
+
+    if (grouper){
+      var xPos = (dimX/2 * Math.random()) - 100;
+      var yPos = (dimY/2 * Math.random()) - 100;
+
+      var rPos = [xPos, yPos];
+    } else {
+      var xPos = (dimX/2 * Math.random()) + ((dimY/2)+ 200);
+      var yPos = (dimY/2 * Math.random()) + ((dimY/2)+ 200);
+
+
+      var rPos = [xPos, yPos];
+    }
     var rVel = [((Math.random() * 2) - 1), ((Math.random() * 2) - 1)];
 
     return new Asteroid(rPos, rVel, Asteroid.RADIUS);
