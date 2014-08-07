@@ -34,6 +34,7 @@ Function.prototype.inherits = function(object) {
 
   Asteroid.COLOR = "red";
   Asteroid.RADIUS =  75;
+  Asteroid.GROUPER = true;
 
   Asteroid.inherits(Asteroids.MovingObject);
 
@@ -60,8 +61,15 @@ Function.prototype.inherits = function(object) {
   };
 
   Asteroid.randomAsteroid = function(dimX, dimY) {
-    var rPos = [(dimX * Math.random()), (dimY * Math.random())];
+    if (Asteroid.GROUPER){
+      var rPos = [(dimX/8 * Math.random()), (dimY/8 * Math.random())];
+    } else {
+      var rPos = [((dimX/8 * Math.random())+ (3*(dimX/4))), ((dimY/8 * Math.random())+ (3*(dimX/4)))];
+    }
+    Asteroid.GROUPER = false
+    var rPos = [(dimX/2 * Math.random()), (dimY/2 * Math.random())];
     var rVel = [((Math.random() * 2) - 1), ((Math.random() * 2) - 1)];
+
     return new Asteroid(rPos, rVel, Asteroid.RADIUS);
   };
 
