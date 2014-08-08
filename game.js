@@ -77,7 +77,7 @@
     renderInter = setInterval(function() {
       game.canvas.font= (i+20) + "px Verdana";
       game.canvas.clearRect(0,0, Game.DIM_X, Game.DIM_Y)
-      game.canvas.fillText("You Lose!", 25+(i*1.5), 25+(i*1.5));
+      game.canvas.fillText("You Lose!",Game.DIM_X/2 - 275, Game.DIM_Y/2 - 50);
       i++;
       if (i  > 150) {
         stopAnim();
@@ -193,6 +193,13 @@
         event.preventDefault();
     }
   };
+
+  window.onload = function() {
+   document.getElementById("restart").addEventListener('click', function() {
+      window.location.reload();
+   }, false);
+  };
+
 
 
   var interID;
