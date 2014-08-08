@@ -48,7 +48,6 @@
   };
 
   var stopAnim = function() {
-    debugger;
     clearInterval(renderInter);
   };
 
@@ -183,8 +182,18 @@
 
     if (key.isPressed('space')) {
       game.fireBullet();
-    };
-  }
+
+    }
+    return false;
+  };
+
+
+  window.onkeydown = function (event) {
+    if (event.keyCode === 32) {
+        event.preventDefault();
+    }
+  };
+
 
   var interID;
 
