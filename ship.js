@@ -24,8 +24,6 @@ Function.prototype.inherits = function(object) {
   Ship.inherits(Asteroids.MovingObject);
 
   Ship.prototype.draw = function(canvas) {
-    this.posX = this.posX;
-    this.posY = this.posY;
     canvas.save();
     canvas.clearRect(0, 0, canvas.width, canvas.height);
     canvas.translate((this.posX - this.img1.width/2), (this.posY - this.img1.height/2));

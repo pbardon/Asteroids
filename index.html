@@ -10,6 +10,13 @@
     <h1 style="display: inline-block;" id="title">Asteroids!</h1>
     <button id="restart">Restart Game!</button>
 
+    <br>
+    <br>
+    <br>
+    <h2 id = "points_tag">Points: </h2>
+    <h2 id = "points">
+    </h2>
+
 
     <div id="gameCanvas">
       <canvas width= "1100" height="700"></canvas>
@@ -33,16 +40,6 @@
     var canvas = document.getElementsByTagName("canvas")[0];
     var c = canvas.getContext('2d');
     new Asteroids.Game(c).start();
-    </script>
-    <!-- <br>
-    <br>
-    <br>
-    <p> <script>
-       var xPos = Asteroids.Game.ship.posX;
-       var yPos = Asteroids.Game.ship.posY;
-       document.write(xPos);
-       document.write(yPos);
-       </script>
-     </p> -->
+  </script>
 </body>
 </html>

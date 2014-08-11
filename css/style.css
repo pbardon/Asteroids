@@ -7,7 +7,7 @@ html, body {
 #gameCanvas {
   position: absolute;
   left: 25%;
-  top: 10%;
+  top: 120px;
   width: 60%;
 }
 
@@ -39,4 +39,21 @@ html, body {
   border: thick solid #42FF00;
   font-size: 15px;
   font-weight: bold;
+}
+
+#points {
+  display: inline-block;
+  color: blue;
+  right: 45%;
+  left: 55%;
+  position: absolute;
+}
+
+
+#points_tag {
+  display: inline-block;
+  color: blue;
+  right: 50%;
+  left: 50%;
+  position: absolute;
 }
