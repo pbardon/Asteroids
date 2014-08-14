@@ -37,11 +37,15 @@
   <script src="keymaster.js"></script>
   <script src="bullet.js"></script>
 
-
   <script>
-    var canvas = document.getElementsByTagName("canvas")[0];
-    var c = canvas.getContext('2d');
-    new Asteroids.Game(c).start();
+    var img = new Image();
+    img.src = 'sky2.png';
+    img.onload = function() {
+      var canvas = document.getElementsByTagName("canvas")[0];
+      var c = canvas.getContext('2d');
+      new Asteroids.Game(c, img).start();
+    }
   </script>
+
 </body>
 </html>
