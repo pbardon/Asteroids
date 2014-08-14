@@ -6,7 +6,8 @@ html, body {
 
 #gameCanvas {
   position: absolute;
-  left: 25%;
+  left: 15%;
+  right: 15%;
   top: 120px;
   width: 60%;
 }
@@ -22,17 +23,37 @@ html, body {
 }
 
 #title {
-  display: inline-block;
-  left: 50%;
-  position: absolute;
+  text-align: center;
   color: #42FF00;
 }
 
+#controls {
+  text-align: center;
+  color: #42FF00;
+}
+
+#restartWrapper {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 20%;
+}
+
+#pointsWrapper {
+  position: absolute;
+  display: inline-block;
+  width: 20%;
+  right: 17%;
+  top: 0;
+}
+
+#pointsWrapper h2{
+  margin: 2px;
+}
 
 #restart {
-  position: absolute;
-  top: 20px;
-  left: 60%;
+  align-self: center;
+  margin-left: 5%;
   border-radius: 10px;
   background-color: #42FF00;
   padding: 5px;
@@ -42,18 +63,12 @@ html, body {
 }
 
 #points {
-  display: inline-block;
   color: blue;
-  right: 45%;
-  left: 55%;
-  position: absolute;
+  text-align: center;
 }
 
 
 #points_tag {
-  display: inline-block;
   color: blue;
-  right: 50%;
-  left: 50%;
-  position: absolute;
+  text-align: center;
 }

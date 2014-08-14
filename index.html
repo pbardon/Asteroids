@@ -7,16 +7,18 @@
 
 <body>
   <div id="backdrop">
-    <h1 style="display: inline-block;" id="title">Asteroids!</h1>
-    <button id="restart">Restart Game!</button>
+    <h1 id="title">Asteroids!</h1>
+    <h2 id = "controls">Use W-A-S-D to move ship and Spacebar to shoot.</h2>
+    <div id="restartWrapper">
+      <button id="restart">Restart Game!</button>
 
-    <br>
-    <br>
-    <br>
-    <h2 id = "points_tag">Points: </h2>
-    <h2 id = "points">
-    </h2>
+    </div>
 
+    <div id="pointsWrapper">
+      <h2 id = "points_tag">Points: </h2>
+      <h2 id = "points"></h2>
+
+    </div>
 
     <div id="gameCanvas">
       <canvas width= "1100" height="700"></canvas>

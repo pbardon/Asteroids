@@ -13,7 +13,7 @@ Function.prototype.inherits = function(object) {
   };
 
   Bullet.RADIUS = 3;
-  Bullet.COLOR = "green";
+  Bullet.COLOR = "#42FF00";
 
   Bullet.inherits(Asteroids.MovingObject);
 

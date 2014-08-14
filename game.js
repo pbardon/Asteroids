@@ -87,11 +87,11 @@
 
     var i = 0;
     renderInter = setInterval(function() {
-      game.canvas.font= (i+20) + "px Verdana";
+      game.canvas.font= ((i*2)+20) + "px Verdana";
       game.canvas.clearRect(0,0, Game.DIM_X, Game.DIM_Y)
-      game.canvas.fillText("You Lose!",Game.DIM_X/2 - 275, Game.DIM_Y/2 - 50);
+      game.canvas.fillText("GAME OVER!",Game.DIM_X/2 - 550, Game.DIM_Y/2 - 50);
       i++;
-      if (i  > 150) {
+      if ((i*2)  > 150) {
         stopAnim();
       }
 
